@@ -5,7 +5,6 @@
         <product-filter :categories="categories" :sellers="sellers" />
       </div>
       <div class="col-md-9 order-md-2">
-        <!-- <h4 class="mb-3">Billing address</h4> -->
         <card-loader :loopCount="8" v-if="loading" />
         <products-list :products_list="product_duplicate" />
       </div>
@@ -76,12 +75,10 @@ export default {
         this.product_duplicate = filteredData;
       } else {
         filteredData = productList;
-
         this.product_duplicate = filteredData;
       }
     },
   },
-
   created() {
     this.getAllProducts();
   },
